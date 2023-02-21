@@ -1,0 +1,24 @@
+.showreel{
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    margin-bottom: 150px;
+    
+    @include devices(laptop){
+        margin-bottom: 100px;
+    }
+    @include devices(tablet){
+        margin-bottom: 80px;
+    }
+    @include devices(mobile){
+        margin-bottom: 50px;
+    }
+    &__video{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}

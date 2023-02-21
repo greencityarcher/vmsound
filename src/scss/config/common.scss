@@ -1,0 +1,53 @@
+// Заголовки, общие БЄМ блоки и проче...
+a{
+  display: inline-block;
+  position: relative;
+  transition: 0.3s all;
+  &:hover{
+    color: $taupeLightColor;
+  }
+}
+
+
+h1{
+  font-size: 48px;
+  line-height: 1.2;
+  color: $taupeBrightColor;
+  font-weight: 300;
+  @include devices(tablet) {
+        font-size: 36px;
+    }
+    @include devices(mobile) {
+          font-size: 24px;
+      }
+}
+h2{
+  font-size: 36px;
+  line-height: 1.2;
+  color: $taupeBrightColor;
+  font-weight: 300;
+  margin-bottom: 50px;
+  @include devices(tablet) {
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+    @include devices(mobile) {
+          font-size: 20px;
+      }
+}
+
+p{
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  margin-bottom: 10px;
+  @include devices(mobile) {
+        font-size: 12px;
+        line-height: 16px;
+    }
+}
+.clear{
+  display: block;
+  height: 0;
+  clear: both;
+}

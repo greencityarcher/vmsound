@@ -1,0 +1,21 @@
+.vmContainer{
+  width: 1200px;
+  margin: auto;
+  max-width: calc(100vw - 120px);
+  @include devices(laptop) {
+        width: auto;
+        max-width: 100%;
+        margin-left: 90px;
+        margin-right: 90px;
+    }
+    @include devices(tablet) {
+          width: auto;
+          margin-left: 40px;
+          margin-right: 40px;
+      }
+    @include devices(mobile) {
+          width: auto;
+          margin-left: 10px;
+          margin-right: 10px;
+      }
+}

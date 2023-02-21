@@ -1,0 +1,65 @@
+.skills{
+    &__itemIcon{
+        display: inline-block;
+        height: 160px;
+        width: auto;
+        margin-bottom: 25px;
+        margin-left: auto;
+        margin-right: auto;
+        @include devices(laptop){
+            height: 140px;
+        }
+        @include devices(tablet){
+            height: 100px;
+        }
+        @include devices(mobile){
+            height: 60px;
+            margin-bottom: 10px;
+        }
+    }
+    &__itemName{
+       // outline: 1px solid olive;
+        font-family: OswaldLight, sans-serif;
+        font-size: 24px;
+        line-height: 1;
+        text-align: center;
+        max-width: 80%;
+        @include devices(tablet){
+            font-size: 20px;
+        }
+        @include devices(mobile){
+            font-size: 12px;
+        }
+    }
+    &__wrap{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 100px;
+        @include devices(laptop){
+            padding: 0;
+        }
+        @include devices(mobile){
+            padding: 0 10px;
+        }
+    }
+    &__item{
+        //outline: 1px solid red;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-basis: 33.3%;
+        margin-bottom: 70px;
+        @include devices(laptop){
+            margin-bottom: 50px;
+        }
+        @include devices(tablet){
+            flex-basis: 50%;
+        }
+        @include devices(mobile){
+            margin-bottom: 30px;
+        }
+    }
+    &__header{
+        text-align: center;
+    }
+}

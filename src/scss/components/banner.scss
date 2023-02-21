@@ -1,0 +1,160 @@
+.banner{
+    padding: 70px 0;
+    position: relative;
+    @include devices(tablet){
+        padding: 60px 0;
+    }
+    @include devices(tablet){
+        padding: 35px 0;
+    }
+    &__inner{
+        width: 44.4%;
+        padding: 70px 70px 70px 0;
+        @include devices(laptop){
+            width: 55%;
+        }
+        @include devices(tablet){
+            width: 57.9%;
+        }
+        @include devices(mobile){
+            width: 70%;
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 70px;
+            bottom: 70px;
+            width: 44.4%;
+            opacity: 0.7;
+            background-color: $grayColor;
+            z-index: 0;
+            @include devices(laptop){
+                width: 67%;
+            }
+            @include devices(tablet){
+                width: 67,9%;
+                top: 60px;
+                bottom: 70px;
+            }
+            @include devices(mobile){
+                width: 80%;
+                top: 35px;
+                bottom: 35px;
+            }
+        }
+        
+    @include devices(tablet){
+        padding: 60px 0;
+    }
+    @include devices(mobile){
+        padding: 35px 0;
+    }
+    &--rigth{
+        padding: 70px 0 70px 70px;
+        margin-left: auto;
+        @include devices(tablet){
+            padding: 60px 0;
+        }
+        @include devices(mobile){
+            padding: 35px 0;
+        }
+        &::after{
+            left: auto;
+            right: 0;
+        }
+    }
+    }
+    &__innerWrap{
+        position: relative;
+        z-index: 1;
+    }
+    &__header{
+        
+        margin-bottom: 50px;
+        @include devices(tablet){
+            margin-bottom: 30px;
+        }
+        @include devices(mobile){
+            margin-bottom: 15px;
+        }
+    }
+    &__text{
+        margin-bottom: 50px;
+        @include devices(tablet){
+            margin-bottom: 30px;
+        }
+        @include devices(mobile){
+            margin-bottom: 15px;
+        }
+        &--first{
+            margin-bottom: 10px;
+        }
+    }
+    &--hireMe{
+        background-image: url('../images/bn1.jpg');
+        background-position: center;
+    }
+    &--contacts{
+        background-image: url('../images/bn2.jpg');
+        background-position: center;
+    }
+    &__linksWrap{
+        display: flex;
+        justify-content: space-between;
+        @include devices(mobile){
+            flex-wrap: wrap;
+        }
+    }
+    &__iconLink{
+        display: flex;
+        align-items: center;
+        color: $taupeBrightColor;
+        @include devices(mobile){
+            flex-basis: 100%;
+        }
+
+        &:hover{
+            color: $taupeLightColor;
+            svg{
+                fill: $taupeLightColor;
+            }
+        }
+        &--telegram{
+            @include devices(mobile){
+                margin-bottom: 20px;
+            }
+        }
+    }
+    &__link{
+        font-size: 14px;
+        line-height: 1;
+        
+        &:hover{
+            svg{
+                fill: $taupeLightColor;
+            }
+        }
+    }
+    &__icon{
+        margin-right: 10px;
+        svg{
+            fill: $taupeBrightColor;
+        }
+        &--email{
+            idth: 36px;
+            height: 37px;
+        }
+        &--telegram{
+            width: 41px;
+            height: 30px;
+            
+        }
+    }
+    &--contacts{
+        .banner__inner::after{
+            right: 0;
+            left: auto;
+        }
+    }
+}

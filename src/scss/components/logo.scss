@@ -1,0 +1,13 @@
+.logo{
+  width: 258px;
+  height: auto;
+  @include devices(laptop) {
+        width: 157px;
+    }
+  @include devices(tablet) {
+        width: 130px;
+    }
+  @include devices(mobile) {
+        width: 100px;
+    }
+}

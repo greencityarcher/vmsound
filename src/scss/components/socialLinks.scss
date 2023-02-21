@@ -1,0 +1,142 @@
+.socialLinks{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    @include devices(laptop){
+        flex-wrap: nowrap;
+    }
+    @include devices(tablet){
+        flex-wrap: wrap;
+    }
+    @include devices(mobile){
+        margin-bottom: 50px;
+    }
+    
+    &__link{
+        display: flex;
+       font-size: 24px;
+       line-height: 1;
+       @include devices(mobile){
+        font-size: 16px;
+         }
+    }
+    &__icon{
+        
+        margin-right: 15px;
+        
+        @include devices(mobile){
+            margin-right: 0;
+        }
+        &--soundcloud{
+            //background-image: url('../images/soundcloud.svg');
+            height: 70px;
+            @include devices(mobile){
+               // heigth: 35px;
+            }
+        }
+        &--youtube{
+            //background-image: url('../images/youtube.svg');
+            height: 49px;
+            @include devices(mobile){
+               // height: 25px;
+            }
+        }
+        &--instagram{
+            //background-image: url('../images/instagram.svg');
+            height: 69px;
+            @include devices(mobile){
+                //height: 35px;
+            }
+        }
+        &--twitter{
+           // background-image: url('../images/twitter.svg');
+            height: 57px;
+            @include devices(mobile){
+               // height: 28px;
+            }
+        }
+        svg{
+            fill: $taupeBrightColor;
+            &:hover{
+                fill: $taupeLightColor;
+            }
+           
+        }
+    }
+    &__itemWrap{
+        
+        flex-basis: 50%;
+        display: flex;
+        @include devices(laptop){
+            flex-basis: auto;
+        }
+        
+        @include devices(tablet){
+            flex-basis: 50%;
+            justify-content: center;
+        }
+        @include devices(mobile){
+            height: 95px;
+        }
+        &:nth-child(even){
+            justify-content: end;
+            @include devices(tablet){
+                justify-content: center;
+            }
+        }
+        &:nth-child(1), &:nth-child(2){
+            margin-bottom: 100px;
+            @include devices(laptop){
+                margin-bottom: 0;
+            }
+            @include devices(tablet){
+                margin-bottom: 80px;
+            }
+            @include devices(mobile){
+                margin-bottom: 30px;
+            }
+        }
+        
+    }
+    &__item{
+        
+        display: inline-flex;
+        height: 70px;
+        align-items: center;
+        color: $taupeBrightColor;
+        
+        @include devices(mobile){
+            flex-direction: column;
+            justify-content: space-between;
+            height: 95px;
+        }
+        
+        &:hover, &:focus{
+           color: $taupeLightColor;
+           
+            svg{
+                fill: $taupeLightColor;
+            }
+           }
+        svg{
+            fill: $taupeBrightColor;
+        }
+        &--youtube{
+            @include devices(mobile){
+                padding-top: 10px;
+            }
+        }
+        &--twitter{
+            @include devices(mobile){
+                padding-top: 6px;
+            }
+        }   
+    }
+    &__item:hover::after{
+        border: none;
+    }
+
+    
+
+}

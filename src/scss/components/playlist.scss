@@ -1,0 +1,19 @@
+.playlist{
+    &__header{
+        @include devices(laptop){
+            text-align: center;
+        }
+    }
+   
+}
+iframe ß.sc-button-cta{
+    background-color: $taupeBrightColor!important;
+    border-color: $taupeBrightColor!important;
+    color: $darkColor;
+}
+ .sc-button-cta:focus, .sc-button-cta:hover, .sc-button-cta:visited, .sc-button.sc-button-white:focus, .sc-button.sc-button-white:hover{
+    background-color: $taupeLightColor!important;
+    border-color: $taupeLightColor!important;
+    color: $darkColor;
+
+ }

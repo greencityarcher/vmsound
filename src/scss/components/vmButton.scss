@@ -1,0 +1,19 @@
+.vmButton{
+    background-color: $taupeBrightColor;
+    padding: 10px 20px;
+    color: $darkColor;
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 1;
+    font-family: OswaldRegular, sans-serif;
+    transition: all .3s;
+    @include devices(tablet){
+        font-size: 16px;
+        padding: 5px 15px;
+    }
+    &:hover{
+        background-color: $taupeLightColor;
+        color: $darkColor;
+    }
+
+}

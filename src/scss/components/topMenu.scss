@@ -1,0 +1,50 @@
+.topMenu{
+  width: 460px;
+  transition: all 300ms ease 0ms;
+  @include devices(tablet){
+   
+    position: fixed; 
+    right: -37.5%;
+    top: 0;
+    width: 37.5%;
+    height: 100vh;
+    padding: 40px;
+    background-color: $grayColor;
+    z-index: 3;
+    @include devices(mobile){
+      right: 0;
+      top: -100vh;
+      width: 100%;
+      text-align: center;
+    }
+  }
+  &__list{
+    display: flex;
+    justify-content: space-between;
+    @include devices(tablet){
+      flex-direction: column;
+    }
+  }
+  &__item{
+    font-size: 24px;
+    line-height: 1;
+    @include devices(tablet){
+      margin-bottom: 30px;
+    }
+    @include devices(mobile){
+      margin-bottom: 20px;
+    }
+  }
+  &__link{
+    color: $taupeBrightColor;
+  }
+ &.open{
+  
+  @include devices(tablet){
+    right: 0;
+  }
+  @include devices(mobile){
+    top: 0;
+  }
+ }
+}

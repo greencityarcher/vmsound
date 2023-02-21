@@ -1,0 +1,12 @@
+.social{
+    @include devices(laptop){
+        text-align: center;
+    }
+    &__header{
+        text-align: center;
+    }
+    &__button{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

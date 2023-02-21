@@ -1,0 +1,14 @@
+.senseSection {
+    margin-bottom: 150px;
+    @include devices(laptop){
+        margin-bottom: 100px;
+    }
+    @include devices(tablet){
+        margin-bottom: 80px;
+    }
+    @include devices(mobile){
+        margin-bottom: 50px;
+    }
+
+
+}

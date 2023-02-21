@@ -1,0 +1,25 @@
+.portfolio{
+    display: flex;
+    @include devices(laptop){
+        display: block;
+    }
+    &__playlist{
+        flex-basis: 50%;
+        padding-right: 60px;
+        @include devices(laptop){
+            padding-right: 0;
+            margin-bottom: 100px;
+        }
+        @include devices(tablet){
+            padding-right: 0;
+            margin-bottom: 70px;
+        }
+        @include devices(mobile){
+            padding-right: 0;
+            margin-bottom: 50px;
+        }
+    }
+    &__social{
+        flex-basis: 50%;
+    }
+}

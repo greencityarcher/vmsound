@@ -1,0 +1,52 @@
+.about{
+    &__inner{
+        display: flex;
+        align-items: center;
+    }
+    &__textWrap{
+        width: 40%;
+        @include devices(laptop){
+            width: 59%;
+        }
+        @include devices(tablet){
+            width: auto;
+        }
+    }
+    &__foto{
+        width: 260px;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        @include devices(laptop){
+            margin-right: 0;
+            margin-left: 12.8%;
+            width: 220px;
+        }
+        @include devices(tablet){
+            display: none;
+            width: 260px;
+            margin-left: 30px;
+            margin-bottom: 30px;
+        }
+        @include devices(mobile){
+            margin-right: 0;
+            width: 140px;
+            margin-left: 10px;
+            margin-bottom: 10px;
+        }
+
+    }
+    &__foto--copy{
+        display: none;
+        @include devices(tablet){
+            float: right;
+            display: inline-block;
+        }
+    }
+    &__text{
+        @include devices(tablet){
+            display: inline;
+            
+        }
+    }
+}

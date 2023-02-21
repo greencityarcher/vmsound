@@ -1,0 +1,78 @@
+.firstScreen{
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-image: url(../images/www-min.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include devices(tablet){
+    height: auto;
+    padding-top: 130px;
+  }
+  @include devices(mobile){
+    height: auto;
+    padding-top: 15px;
+  }
+
+  &__hider{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgb(29,31,30);
+    background: linear-gradient(90deg, rgba(29,31,30,1) 60%, rgba(29,31,30,0) 100%);
+    @include devices(laptopt){
+      width: 60%;
+    }
+    @include devices(tablet){
+      width: 75%;
+    }
+  }
+  &__safeTop{
+   // height: 100px;
+  }
+  &__inner{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include devices(tablet){
+      display: block;
+      height: auto;
+    }
+  }
+
+  &__textwrap{
+    padding-top: 100px;
+    position: relative;
+    width: 30%;
+    z-index: 30;
+    @include devices(laptop){
+      width: 46%;
+      
+    }
+    @include devices(tablet){
+      width: 64%;
+      padding-top: 75px;
+    }
+    @include devices(mobile){
+      width: 100%;
+      padding-top: 60px;
+    }
+  }
+  &__header{
+    margin-bottom: 50px;
+    @include devices(tablet){
+      margin-bottom: 30px;
+    }
+  }
+  &__textContainer{
+    margin-bottom: 50px;
+    @include devices(tablet){
+      margin-bottom: 30px;
+    }
+  }
+}
+
+
