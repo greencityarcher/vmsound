@@ -140,39 +140,35 @@ btn.onclick = function(){
 }
 
 function customPlayer(){
-  
   var player;
-  
-
-// this function gets called when API is ready to use
-function onYouTubePlayerAPIReady() {
-  // create the global player from the specific iframe (#video)
-  player = new YT.Player("showreel", {
-    events: {
-      // call this function when player is ready to use
-      onReady: onPlayerReady
-    }
-  });
-  
+  if (typeof(YT) == 'undefined' || typeof(YT.Player) == 'undefined') {
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 }
 
+function loadPlayer() {
+        window.onYouTubePlayerAPIReady = function() {
+          player = new YT.Player("showreel", {
+            events: {
+              // call this function when player is ready to use
+              onReady: onPlayerReady
+            }
+          });
+        };
+}
 function onPlayerReady(event) {
   // bind events
   var playButton = document.getElementById("play-button");
   playButton.addEventListener("click", function () {
-    player.playVideo();
     
+    player.playVideo();
   });
-
-  
 }
-
-// Inject YouTube API script
-var tag = document.createElement("script");
-tag.src = "//www.youtube.com/player_api";
-var firstScriptTag = document.getElementsByTagName("script")[0];
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-  
+document.addEventListener("DOMContentLoaded", function() {
+  loadPlayer();
+});
 }
 
 function smoothScroll(){
