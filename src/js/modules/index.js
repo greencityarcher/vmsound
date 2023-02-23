@@ -17,7 +17,7 @@ function isWebp() {
       'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA'
   }
   // Добавление класса _webp или _no-webp для HTML
-  testWebp((support) => {
+  testWebp((support) => {0
     const className = support ? 'webp' : 'no-webp'
     html.classList.add(className)
 
@@ -136,8 +136,19 @@ function vmMenu(){
 btn.onclick = function(){
   btn.classList.toggle('close');
   menu.classList.toggle('open');
+
+  let menuButtons = document.querySelectorAll('.topMenu__link');
+  menuButtons.forEach(function(item){
+    item.addEventListener('click', function(e){   
+      if (menu.classList.contains('open')){
+        menu.classList.remove('open');
+        btn.classList.remove('close');
+      }
+    });
+  });
 }
 }
+
 
 function customPlayer(){
   var player;
@@ -162,7 +173,7 @@ function onPlayerReady(event) {
   // bind events
   var playButton = document.getElementById("play-button");
   playButton.addEventListener("click", function () {
-    
+
     player.playVideo();
   });
 }
@@ -172,11 +183,12 @@ document.addEventListener("DOMContentLoaded", function() {
 }
 
 function smoothScroll(){
+  
   // собираем все якоря; устанавливаем время анимации и количество кадров
 const anchors = [].slice.call(document.querySelectorAll('a[href*="#"]')),
 animationTime = 300,
 framesCount = 20;
-
+console.log(anchors);
 anchors.forEach(function(item) {
 // каждому якорю присваиваем обработчик события
 item.addEventListener('click', function(e) {
@@ -193,13 +205,15 @@ let scrollBy = coordY / framesCount;
 
 // если к-во пикселей для скролла за 1 такт больше расстояния до элемента
 // и дно страницы не достигнуто
-if(scrollBy > window.pageYOffset - coordY && window.innerHeight + window.pageYOffset < document.body.offsetHeight) {
+
+if(scrollBy > window.pageYOffset - coordY) {
   // то скроллим на к-во пикселей, которое соответствует одному такту
   window.scrollBy(0, scrollBy);
 } else {
   // иначе добираемся до элемента и выходим из интервала
   window.scrollTo(0, coordY);
   clearInterval(scroller);
+  
 }
 // время интервала равняется частному от времени анимации и к-ва кадров
 }, animationTime / framesCount);
