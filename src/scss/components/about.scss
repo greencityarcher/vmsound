@@ -46,7 +46,11 @@
     &__text{
         @include devices(tablet){
             display: inline;
-            
+            &::after{
+                content:'';
+                display: block;
+                height: 10px;;
+            }
         }
     }
 }
