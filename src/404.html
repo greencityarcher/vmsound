@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', {
+    'title': 'Главная'
+  })
+  <body>
+    <div class="wrapper">
+      @@include('html/header.html', {})
+      <main class="page">
+        <section class="firstScreen firstScreen--no-bcg senseSection">
+          <div class="firstScreen__hider"></div>
+          <div class="firstScreen__safeTop"></div>
+          <div class="firstScreen__inner firstScreen__inner--centered">
+            <div class="vmContainer">
+              <div class="firstScreen__textwrap firstScreen__textwrap--centered">
+                <h1 class="firstScreen__404text">Page not found</h1>
+                <div class="firstScreen__giantText">
+                  404
+                </div>
+                <div class="firstScreen__404text firstScreen__404text--bottom">Go to my portfolio. It sounds good!</div>
+                <a href="/portfolio" class="firstScreen__playbtn vmButton">Go to portfolio</a>
+              </div>
+            </div>
+          </div> 
+        </section>
+      </main>
+      @@include('html/footer.html', {})
+    </div>
+    @@include('html/script.html', {})
+  </body>
+</html> 
