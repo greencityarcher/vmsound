@@ -51,3 +51,9 @@ p{
   height: 0;
   clear: both;
 }
+.safe-top{
+  padding-top: 150px;
+  @include devices(tablet){
+    padding-top: 80px;
+  }
+}

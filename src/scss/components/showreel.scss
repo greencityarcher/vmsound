@@ -4,6 +4,7 @@
     height: 0;
     padding-bottom: 56.25%;
     margin-bottom: 150px;
+    background-color: #000000;
     
     @include devices(laptop){
         margin-bottom: 100px;
